@@ -32,7 +32,7 @@ plot2<-function(){
   data2$rDate<-strptime(paste(data2$Date, data2$Time),"%d/%m/%Y %H:%M:%S")
   #Set locale language to ensure the weekday names to be in english
   Sys.setlocale("LC_TIME", "English")
-  #Create grafic
+  #Create graphic
   print("Creating graphic")
   par(mfrow = c(1,1))
   plot(data2$rDate,data2$Global_active_power, type = "l",ylab = "Global Active Power (kilowatts)",xlab="")

@@ -27,7 +27,7 @@ plot1<-function(){
     print("Getting data, between the required dates")
     idx<-grep("^0?[12].0?2.2007", data$Date)
     data2<-data[ idx ,]
-    #Create grafic
+    #Create graphic
     print("Creating graphic")
     par(mfrow = c(1,1))
     hist(data2$Global_active_power, col="red",xlab = "Global Active Power (kilowatts)", main = "Global Active Power")

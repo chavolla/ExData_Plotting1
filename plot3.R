@@ -32,7 +32,7 @@ plot3<-function(){
   data2$rDate<-strptime(paste(data2$Date, data2$Time),"%d/%m/%Y %H:%M:%S")
   #Set locale language to ensure the weekday names to be in english
   Sys.setlocale("LC_TIME", "English")
-  #Create grafic
+  #Create graphic
   print("Creating graphic")
   png(filename = "plot3.png")
   par(mfrow = c(1,1))
