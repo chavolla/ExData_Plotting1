@@ -35,18 +35,22 @@ plot4<-function(){
   #Create graphic
   print("Creating graphic")
   png(filename = "plot4.png",height = 504, width = 504)
-  
+  #Set image layout
   par(mar=c(4,4,4,1), mfrow = c(2,2))
+  #First plot
   plot(data2$rDate,data2$Global_active_power, type = "l",ylab = "Global Active Power",xlab="")
+  #Second plot
   plot(data2$rDate,data2$Voltage, type = "l",ylab = "Voltage",xlab="datetime")
+  #Third plot
   plot(data2$rDate,data2$Sub_metering_1, type = "l",ylab = "Energy sub metering",xlab="")
   points(data2$rDate, data2$Sub_metering_2, col="red", type="l")
   points(data2$rDate, data2$Sub_metering_3, col="blue", type="l")  
   legend("topright",c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col=c("black","red","blue"), lty=1, bty = "n",  cex = 0.87)  
-  plot(data2$rDate,data2$Global_reactive_power, type = "l",xlab="datetime", ylab = "Global_reactive_power")
-  
+  #Fourth plot
+  plot(data2$rDate,data2$Global_reactive_power, type = "l",xlab="datetime", ylab = "Global_reactive_power")  
   #close the png device
   dev.off()
+  #Return plot layout
   par(mfrow = c(1,1))
   print("Done!")
 }
